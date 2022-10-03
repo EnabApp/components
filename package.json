@@ -1,0 +1,45 @@
+{
+  "name": "@enab/ui",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/module.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "enab:update": "yarn add @enab/core@latest @enab/utilities@latest @enab/systemapps@latest --dev",
+    "release": "cd scripts && node --loader ts-node/esm release.ts"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.10"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/color-mode": "^3.1.4",
+    "@pinia/nuxt": "^0.4.1",
+    "@unocss/inspector": "^0.45.15",
+    "@unocss/nuxt": "^0.45.15",
+    "@unocss/preset-attributify": "^0.45.15",
+    "@unocss/preset-typography": "^0.45.15",
+    "@unocss/preset-web-fonts": "^0.45.15",
+    "@vueuse/core": "^9.1.1",
+    "@vueuse/nuxt": "^9.1.1",
+    "moment": "latest",
+    "nuxt": "^3.0.0-rc.10",
+    "ts-node": "^10.9.1"
+  },
+  "description": "Enab WebOS Core Module",
+  "author": "Enab WebOS Core Team"
+}
