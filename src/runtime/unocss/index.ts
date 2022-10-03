@@ -13,7 +13,7 @@ export const uno: UnocssNuxtOptions = {
     webFonts: {
       provider: 'google',
       fonts: {
-        sans: ['Almarai:300,400,700,800'],
+        sansSerif: ['Tajawal:300,400,500,700'],
       },
     },
     safelist: safelist,
@@ -24,7 +24,7 @@ export const uno: UnocssNuxtOptions = {
             * {
               padding: 0;
               margin: 0;
-              font-family: ${theme['fontFamily']['sans']};
+              font-family: ${theme['fontFamily']['sansSerif']};
               -webkit-touch-callout: none; /* iOS Safari */
               -webkit-user-select: none; /* Safari */
                -khtml-user-select: none; /* Konqueror HTML */
