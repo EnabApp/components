@@ -2,65 +2,43 @@
     "primary": {
         "DEFAULT": "#EAEAEA"
     },
-    "secondary": {
-        "DEFAULT": "#D9D9D9"
-    },
     "primaryOp": {
         "DEFAULT": "#151515"
+    },
+    "secondary": {
+        "DEFAULT": "#D9D9D9"
     },
     "secondaryOp": {
         "DEFAULT": "#1D1D1D"
     },
+    "tertiary": {
+        "DEFAULT": "#615F5B"
+    },
+    "tertiaryOp": {
+        "DEFAULT": "#9EA0A4"
+    },
     "success": {
-        "DEFAULT": "#06DD78",
-        "50": "#9EFCD0",
-        "100": "#8AFCC7",
-        "200": "#63FBB3",
-        "300": "#3BFAA0",
-        "400": "#13F98D",
-        "500": "#06DD78",
-        "600": "#05B060",
-        "700": "#048447",
-        "800": "#02572F",
-        "900": "#012A17"
+        "DEFAULT": "#00B993"
+    },
+    "successOp": {
+        "DEFAULT": "#01C29A"
     },
     "error": {
-        "DEFAULT": "#FF5151",
-        "50": "#FFFFFF",
-        "100": "#FFF4F4",
-        "200": "#FFCBCB",
-        "300": "#FFA3A3",
-        "400": "#FF7A7A",
-        "500": "#FF5151",
-        "600": "#FF1919",
-        "700": "#E00000",
-        "800": "#A80000",
-        "900": "#700000"
+        "DEFAULT": "#E94B41"
+    },
+    "errorOp": {
+        "DEFAULT": "#E85147"
     },
     "warning": {
-        "DEFAULT": "#DF9606",
-        "50": "#FCDDA0",
-        "100": "#FCD68C",
-        "200": "#FBC865",
-        "300": "#FABA3D",
-        "400": "#F9AC15",
-        "500": "#DF9606",
-        "600": "#B77B05",
-        "700": "#906104",
-        "800": "#684603",
-        "900": "#402B02"
+        "DEFAULT": "#EFBB34"
+    },
+    "warningOp": {
+        "DEFAULT": "#FFD155"
     },
     "info": {
-        "DEFAULT": "#0691DD",
-        "50": "#9EDBFC",
-        "100": "#8AD4FC",
-        "200": "#63C5FB",
-        "300": "#3BB6FA",
-        "400": "#13A8F9",
-        "500": "#0691DD",
-        "600": "#0577B5",
-        "700": "#045D8E",
-        "800": "#034366",
-        "900": "#02293E"
+        "DEFAULT": "#298DFE"
+    },
+    "infoOp": {
+        "DEFAULT": "#3393FF"
     }
 }
