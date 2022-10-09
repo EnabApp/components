@@ -1,24 +1,12 @@
 <template>
-  <div bg="secondary dark:secondaryOp" p="1.5" border="rounded-[5px]" flex="~ gap-1.5">
-    <div
-      v-for="item in list"
-      @click="select(item)"
-      :class="{
-        'font-medium bg-primaryOp dark:bg-primary shadow text-primary dark:text-primaryOp':
-          item.id == selected.id,
-        'text-secondaryOp dark:text-primaryOp': !(item.id == selected.id)
-      }"
-      :key="item.id"
-      text="xs"
-      p="2"
-      w="full"
-      border="rounded-[3px]"
-      flex="~ gap-2"
-      justify="center"
-      items="center"
-      cursor="pointer"
-    >
-      <component v-if="item.icon" h="20px" w="20px" text="dark:primaryOp primary" :is="`${item.icon}`" />
+  <div flex="~" :class="[size == 'sm' ? 'h-8 text-sm' : (size == 'md' ? 'h-38px text-lg' : 'h-50px text-lg')]">
+    <div v-for="item in list" @click="select(item)" :class="[
+      item.id == selected.id
+      ? 'font-medium bg-secondary dark:bg-secondaryOp shadow'
+      : 'bg-tertiary dark:bg-tertiaryOp',
+      item.id % 2 == 0 ? 'ltr:rounded-r-[10px] rtl:rounded-l-[10px]' : 'ltr:rounded-l-[10px] rtl:rounded-r-[10px]',
+    ]" :key="item.id" text="tertiaryOp dark:tertiary" font="medium" p="2" w="full" flex="~ gap-1" justify="ltr:end" items="center" cursor="pointer">
+      <component v-if="item.icon" h="20px" w="20px" :is="`${item.icon}`" />
       <span>{{ item.value }}</span>
     </div>
   </div>
@@ -32,6 +20,10 @@ const props = defineProps({
     type: Array,
     default: [],
   },
+  size: {
+    type: String,
+    default: 'sm',
+  }
 });
 
 const selected = ref(props.list[0]);

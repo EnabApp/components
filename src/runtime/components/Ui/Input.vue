@@ -3,7 +3,7 @@
     <!-- Label -->
     <label
       v-if="label"
-      class="text-md font-medium text-secondaryOp dark:text-secondary"
+      class="text-md font-medium text-tertiaryOp dark:text-tertiary"
       >{{ label }}</label
     >
 
@@ -11,7 +11,7 @@
     <div
       class="group"
       :class="{
-        'focus-within:border-primaryOp dark:focus-within:border-primary':
+        'focus-within:border-tertiaryOp dark:focus-within:border-tertiary':
           !error,
         'focus-within:border-error-500': error,
         'h-8': size == 'sm',
@@ -23,8 +23,9 @@
       justify="between"
       p="x-2"
       un-text="xl secondary dark:secondaryOp"
-      border="~ 1 secondary dark:secondaryOp rounded-[5px]"
+      border="~ 1 secondary dark:secondaryOp rounded-[10px]"
       outline="none focus-within:none"
+      bg="secondary dark:secondaryOp"
     >
       <div flex="~ gap-2 grow" items="center">
         <!-- Icon -->

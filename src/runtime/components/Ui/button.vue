@@ -8,12 +8,14 @@
       flex="~ gap-2"
       justify="center"
     >
+      <component v-if="icon" :is="icon" w="6" h="6" />
       <slot />
     </NuxtLink>
 
     <!-- Default  Button -->
     <button v-else :class="classes" :disabled="disabled ? true : false">
       <!-- Title & icon button -->
+      <component v-if="icon" :is="icon" w="6" h="6" />
       <slot />
     </button>
   </div>
@@ -45,10 +47,13 @@ const props = defineProps({
     type: String,
     default: "sm",
   },
+  icon: {
+    type: String,
+  },
 });
 
 const classes = computed(() => {
-  const array = ["rounded-[5px]", "no-underline"];
+  const array = ["flex gap-2 items-center", "rounded-[10px]", "no-underline"];
   switch (props.size) {
     case "sm":
       array.push("px-3 py-1.5 text-sm");
@@ -74,6 +79,17 @@ const classes = computed(() => {
       } else {
         array.push(
           "border-none bg-primaryOp dark:bg-primary hover:bg-secondaryOp dark:hover:bg-secondary text-primary dark:text-primaryOp hover:text-secondary dark:hover:text-secondaryOp focus:opacity-75 "
+        );
+      }
+      break;
+    case "secondary":
+      if (props.outline) {
+        array.push(
+          "border border-secondaryOp dark:border-secondary bg-inherit text-secondaryOp hover:text-secondaryOp dark:text-secondary dark:hover:text-secondary hover:border-secondaryOp dark:hover:border-secondary focus:opacity-75  "
+        );
+      } else {
+        array.push(
+          "border-none bg-secondary dark:bg-secondaryOp text-tertiaryOp dark:text-tertiary hover:text-primaryOp dark:hover:text-primary focus:opacity-75 "
         );
       }
       break;

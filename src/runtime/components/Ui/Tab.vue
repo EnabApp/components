@@ -5,7 +5,7 @@
         : 'bg-transparent',
 
         'text-secondaryOp hover:text-primaryOp dark:text-secondary dark:hover:text-primary'
-    ]" border="rounded-[5px]">
+    ]" border="rounded-[10px]">
         <slot />
     </div>
 </template>
