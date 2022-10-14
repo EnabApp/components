@@ -1,16 +1,12 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="md" mdcolor="secondary" icon="IconNotification">Test</UiButton>
-    <UiInput size="md" w="96" placeholder="Placeholder" type="text" />
+    <UiButton size="lg" mdcolor="secondary" icon="IconNotification">Test</UiButton>
+    <UiInput size="lg" placeholder="Placeholder" type="text" />
 
-    <!-- <UiRadio :options="[{id: '1', name: 'mosa'},{id: '2', name: 'mohameed'},{id: '3', name: 'mfosa'},{id: '4', name: 'mohagtremeed'}]"></UiRadio> -->
-
-    <!-- <UiCheckBox :options="[{id: '1', name: 'mosa'},{id: '2', name: 'mohameed'}]"></UiCheckBox> -->
-    <UiDropdown :list="[
+    <UiDropdown size="lg" :list="[
       { id: 1, value: 'John' },
       { id: 2, value: 'Jane' },
     ]" placeholder="Type to search" multiple>
-      <UiButton>Save</UiButton>
     </UiDropdown>
 
     <!-- <UiSwitch size="md" :list="[

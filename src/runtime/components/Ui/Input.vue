@@ -51,11 +51,7 @@
             'text-lg': size == 'lg',
           }"
           class="py-2 text-secondaryOp bg-transparent border-0 outline-none appearance-none dark:text-secondary dark:bg-transparent grow focus:outline-none"
-        />
-      </div>
-
-      <!-- Buttons -->
-      <div
+iv
         id="buttons"
         flex="~ gap-1"
         items="center"

@@ -1,22 +1,7 @@
 <template>
   <div w="full" @click="dropdown = true" position="relative">
-    <!-- Showing multiple selects -->
-    <div v-if="multiple" flex="~ gap-2px">
-      <span
-        v-for="item in selectedItems"
-        @click="selectItem(item)"
-        :key="item.id"
-        p="x-1"
-        text="xs secondary dark:secondaryOp"
-        bg="secondaryOp dark:secondary"
-        border="~ gray-50 dark:gray-600 rounded-5px"
-        cursor="pointer"
-        >{{ item.value }}</span
-      >
-    </div>
-
     <!-- Main Search -->
-    <UiInput
+    <UiInput :size="props.size"
       :label="label"
       :placeholder="placeholder"
       v-model="search"
@@ -24,6 +9,25 @@
     >
       <slot />
     </UiInput>
+        <!-- Showing multiple selects -->
+        <div v-if="multiple" class="absolute top-0 left-0" flex="~ gap-2px"
+        :class="{
+          'mt-1.7 ml-1': size == 'sm',
+          'mt-3.25 ml-1': size == 'md',
+          'mt-4 ml-1': size == 'lg',
+        }">
+          <span
+            v-for="item in selectedItems"
+            @click="selectItem(item)"
+            :key="item.id"
+            p="x-1"
+            text="xs secondary dark:secondaryOp"
+            bg="secondaryOp dark:secondary"
+            border="~ gray-50 dark:gray-600 rounded-5px"
+            cursor="pointer"
+            >{{ item.value }}</span
+          >
+        </div>
 
     <div
       v-if="dropdown"
@@ -90,6 +94,10 @@ const props = defineProps({
   },
   icon: {
     type: String,
+  },
+  size: {
+    type: String,
+    default: "sm",
   },
 });
 
