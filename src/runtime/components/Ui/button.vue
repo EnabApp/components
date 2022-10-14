@@ -1,21 +1,15 @@
 <template>
   <div flex="~ col gap-1">
     <!-- Nuxt Link Button -->
-    <NuxtLink
-      v-if="to"
-      :to="to"
-      :class="classes"
-      flex="~ gap-2"
-      justify="center"
-    >
+    <NuxtLink v-if="to" :to="to" :class="classes" flex="~ gap-2" justify="center">
       <component v-if="icon" :is="icon" w="6" h="6" />
       <slot />
     </NuxtLink>
 
     <!-- Default  Button -->
-    <button v-else :class="classes" :disabled="disabled ? true : false">
+    <button v-else :class="classes" justify="center" :disabled="disabled ? true : false">
       <!-- Title & icon button -->
-      <component v-if="icon" :is="icon" w="6" h="6" />
+      <component v-if="icon" :is="icon" w="5" h="5" />
       <slot />
     </button>
   </div>
@@ -56,13 +50,13 @@ const classes = computed(() => {
   const array = ["flex gap-2 items-center", "rounded-[10px]", "no-underline"];
   switch (props.size) {
     case "sm":
-      array.push("px-3 py-1.5 text-sm");
+      array.push("px-3 py-1.4 text-sm");
       break;
     case "md":
-      array.push("px-5 py-3 text-md");
+      array.push("px-5 py-2.5 text-base");
       break;
     case "lg":
-      array.push("px-6 py-3 text-lg");
+      array.push("px-5 py-2.8 text-lg");
       break;
   }
 

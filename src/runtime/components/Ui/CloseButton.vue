@@ -25,7 +25,5 @@ const classes = computed(() => {
     return array;
 });
 </script>
-
 <style>
-
 </style>

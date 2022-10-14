@@ -14,9 +14,9 @@
         'focus-within:border-tertiaryOp dark:focus-within:border-tertiary':
           !error,
         'focus-within:border-error-500': error,
-        'h-8': size == 'sm',
-        'h-38px': size == 'md',
-        'h-50px': size == 'lg',
+        'h-7.3 text-sm': size == 'sm',
+        'h-10.4 text-md': size == 'md',
+        'h-12 text-lg': size == 'lg',
       }"
       flex="~ gap-2"
       font="leading-tight"
@@ -46,9 +46,9 @@
           :placeholder="placeholder"
           :type="type == 'password' ? statePassword : type"
           :class="{
-            'text-md': size == 'sm',
-            'text-lg': size == 'md',
-            'text-xl': size == 'lg',
+            'text-sm': size == 'sm',
+            'text-base': size == 'md',
+            'text-lg': size == 'lg',
           }"
           class="py-2 text-secondaryOp bg-transparent border-0 outline-none appearance-none dark:text-secondary dark:bg-transparent grow focus:outline-none"
         />

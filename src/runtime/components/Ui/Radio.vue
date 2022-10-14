@@ -6,7 +6,7 @@
       class="flex flex-row items-center cursor-pointer text-primaryOp dark:text-primary"
     >
       <IconRadioFilled v-if="selected == option.id" w="18px" />
-      <IconRadioRegular v-else />
+      <IconRadioRegular v-else w="18px" />
       <span :for="option.id">{{ option.name }}</span>
 
       <input
