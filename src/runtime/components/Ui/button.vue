@@ -7,10 +7,10 @@
     </NuxtLink>
 
     <!-- Default  Button -->
-    <button v-else :class="classes" justify="center" :disabled="disabled ? true : false">
+    <button v-else :class="classes" :disabled="disabled ? true : false">
       <!-- Title & icon button -->
-      <component v-if="icon" :is="icon" w="5" h="5" />
       <slot />
+      <component v-if="icon" :is="icon" w="5" h="5" />
     </button>
   </div>
 </template>
@@ -43,6 +43,10 @@ const props = defineProps({
   },
   icon: {
     type: String,
+  },
+  position: {
+    type: String,
+    default: "center",
   },
 });
 
@@ -143,6 +147,18 @@ const classes = computed(() => {
       }
       break;
   }
+  switch (props.position) {
+    case "left":
+      array.push("justify-end");
+      break;
+    case "right":
+      array.push("justify-start");
+      break;
+    case "center":
+      array.push("justify-center");
+      break;
+  }
+
   return array;
 });
 </script>

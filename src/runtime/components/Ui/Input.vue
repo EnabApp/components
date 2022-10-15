@@ -30,6 +30,7 @@
       <div flex="~ gap-2 grow" items="center">
         <!-- Icon -->
         <component
+        class="mt-2"
           v-if="icon"
           h="20px"
           w="20px"

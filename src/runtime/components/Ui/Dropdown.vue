@@ -57,7 +57,10 @@
           border="rounded-5px"
           duration="100"
         >
-          <span>{{ item.value }}</span>
+          <span>
+            {{ item.value }}
+          </span>
+
           <span v-if="item.id == selectedIdRef">
             <IconLoading w="10px" />
           </span>
