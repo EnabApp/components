@@ -18,14 +18,32 @@
       { id: '4', value: 'Shark', icon: 'IconEnab' },
     ]" /> -->
 
-    <UiDropdown size="md" multiple :list="[
+    <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
+    <Teleport to="body">
+      <UiModal v-model="stateModal" @cancel="modalCanceled">
+        <div class="text-center text-2xl mb-5 ">
+          صفحة تسجيل الدخول
+        </div>
+        <div>
+          <UiInput size="lg" placeholder="Placeholder" type="text" class="mb-5" />
+          <UiInput size="lg" placeholder="Placeholder" type="text" />
+        </div>
+        <div>
+          <UiButton position="center" size="lg" mdcolor="secondary" icon="IconNotification" class="mt-5"> Login</UiButton>
+        </div>
+      </UiModal>
+    </Teleport>
+
+
+
+    <!-- <UiDropdown size="md" multiple :list="[
       { id: 1, value: 'mosa' },
       { id: 2, value: 'nameer' },
       { id: 3, value: 'abd' },
       { id: 4, value: 'naser' },
       { id: 5, value: 'taher' },
     ]" placeholder="Type to search">
-    </UiDropdown>
+    </UiDropdown> -->
 
     <!-- <UiSwitch size="md" :list="[
       { id: '1', value: 'تجربة', icon: 'IconEnab' },

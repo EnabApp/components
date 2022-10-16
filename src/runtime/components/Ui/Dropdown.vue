@@ -60,7 +60,7 @@
           <span>
             {{ item.value }}
           </span>
-          <span v-if="selectedItems.includes(item)">
+          <span v-if="selectedItems.find((x) => x.id == item.id)">
             true
           </span>
 
