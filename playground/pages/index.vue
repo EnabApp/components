@@ -21,9 +21,9 @@
     <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
     <Teleport to="body">
       <UiModal v-model="stateModal" @cancel="modalCanceled">
-        <div class="text-center text-2xl mb-5 ">
+        <template #title>
           صفحة تسجيل الدخول
-        </div>
+        </template>
         <div>
           <UiInput size="lg" placeholder="Placeholder" type="text" class="mb-5" />
           <UiInput size="lg" placeholder="Placeholder" type="text" />

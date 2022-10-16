@@ -1,53 +1,17 @@
 <template>
   <Transition>
-    <div
-      @keypress.esc="$emit('cancel')"
-      v-if="modelValue"
-      position="absolute top-0 left-0"
-      z="50"
-      flex="~"
-      place="items-center"
-      justify="center"
-      w="screen"
-      h="screen"
-      bg="w-20 dark:b-20"
-      backdrop="~ blur-sm"
-    >
-      <div ref="modalState" flex="~ col " max-w="70%" min-w="25%" max-h="70%" min-h="25%">
+    <div @keypress.esc="$emit('cancel')" v-if="modelValue" position="absolute top-0 left-0" z="50" flex="~" place="items-center" justify="center" w="screen" h="screen" bg="primary dark:primaryOp opacity-5 dark:opacity-5" backdrop="~ blur-sm">
+      <div ref="modalState" flex="~ col" max-w="70%" min-w="25%" max-h="70%" min-h="25%">
         <!-- Header -->
-        <div
-          flex="~ gap-4"
-          place="items-center"
-          justify="between"
-          bg="primary dark:primaryOp"
-          h="50px"
-          p="y-2 x-20px"
-          text="lg"
-          font="medium"
-          class="backdrop-blur-[5px] opacity-90 border-rounded-t-[10px]"
-        >
-          <div flex="grow" text="primaryOp dark:primary">
+        <div flex="~ gap-4" place="items-center" justify="between" bg="primary dark:black opacity-30 dark:opacity-30" h="50px" p="y-3 x-8" text="lg" font="medium" class="backdrop-blur-[5px] opacity-90 border-rounded-t-[10px]">
+          <IconClose @click="$emit('cancel')" w="4" h="4" cursor="pointer" rounded="full" text="primaryOp dark:primary"></IconClose>
+          <div flex="grow" text="xl primaryOp dark:primary right">
             <slot name="title"></slot>
           </div>
-          <div
-            @click="$emit('cancel')"
-            w="20px"
-            h="20px"
-            cursor="pointer"
-            rounded="full"
-            bg="error"
-          ></div>
         </div>
 
         <!-- Content -->
-        <div
-          flex="grow"
-          p="x-6 y-6"
-          text="primaryOp dark:primary"
-          overflow="y-auto"
-          rounded="b-lg"
-          bg="primary dark:primaryOp"
-        >
+        <div flex="grow" p="t-6 b-8 x-8" text="primaryOp dark:primary" overflow="y-auto" rounded="b-lg" bg="primary dark:black opacity-40 dark:opacity-40">
           <slot></slot>
         </div>
 
@@ -64,7 +28,7 @@
 </template>
 
 <script setup>
-import { onKeyStroke , onClickOutside , ref } from "#imports";
+import { onKeyStroke, onClickOutside, ref } from "#imports";
 
 const props = defineProps({
   modelValue: {
