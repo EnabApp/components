@@ -60,6 +60,9 @@
           <span>
             {{ item.value }}
           </span>
+          <span v-if="selectedItems.includes(item)">
+            true
+          </span>
 
           <span v-if="item.id == selectedIdRef">
             <IconLoading w="10px" />

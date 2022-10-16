@@ -30,7 +30,6 @@
       <div flex="~ gap-2 grow" items="center">
         <!-- Icon -->
         <component
-        class="mt-2"
           v-if="icon"
           h="20px"
           w="20px"
@@ -51,7 +50,7 @@
             'text-base': size == 'md',
             'text-lg': size == 'lg',
           }"
-          class="py-2 text-secondaryOp bg-transparent border-0 outline-none appearance-none dark:text-secondary dark:bg-transparent grow focus:outline-none"
+          class="py-2 text-secondaryOp bg-transparent border-0 outline-none appearance-none dark:text-secondary dark:bg-transparent grow focus:outline-none mb-3"
 iv
         id="buttons"
         flex="~ gap-1"
