@@ -16,7 +16,7 @@
         'focus-within:border-error-500': error,
         'h-7.3 text-sm': size == 'sm',
         'h-10.4 text-md': size == 'md',
-        'h-12 text-lg': size == 'lg',
+        'h-12.1 text-lg': size == 'lg',
       }"
       flex="~ gap-2"
       font="leading-tight"

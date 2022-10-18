@@ -46,7 +46,7 @@ const props = defineProps({
   },
   position: {
     type: String,
-    default: "center",
+    default:"center",
   },
 });
 

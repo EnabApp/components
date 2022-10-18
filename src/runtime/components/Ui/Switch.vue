@@ -1,5 +1,5 @@
 <template>
-  <div flex="~" :class="[size == 'sm' ? 'h-8 text-sm' : (size == 'md' ? 'h-38px text-lg' : 'h-48px text-lg')]">
+  <div flex="~" :class="[size == 'sm' ? 'h-7.8 text-sm' : (size == 'md' ? 'h-11 text-lg' : 'h-12.6 text-lg')]">
     <div v-for="item in list" @click="select(item)" :class="[
       item.id == selected.id
       ? 'font-medium bg-secondary dark:bg-secondaryOp shadow'

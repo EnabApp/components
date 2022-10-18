@@ -1,7 +1,13 @@
 <template>
   <Transition>
     <div @keypress.esc="$emit('cancel')" v-if="modelValue" position="absolute top-0 left-0" z="50" flex="~" place="items-center" justify="center" w="screen" h="screen" bg="primary dark:primaryOp opacity-5 dark:opacity-5" backdrop="~ blur-sm">
-      <div ref="modalState" flex="~ col" max-w="70%" min-w="25%" max-h="70%" min-h="25%">
+      <div ref="modalState" flex="~ col"
+      :class="{
+        'max-w-75% min-w-25% max-h-70% min-h-25%': size == 'sm',
+        'max-w-75% min-w-50% max-h-70% min-h-50%': size == 'md',
+        'max-w-75% min-w-75% max-h-70% min-h-75%': size == 'lg', 
+      }"
+      >
         <!-- Header -->
         <div flex="~ gap-4" place="items-center" justify="between" bg="white dark:black opacity-80 dark:opacity-80" h="50px" p="y-3 x-8" text="lg" font="medium" class="backdrop-blur-[5px] opacity-90 border-rounded-t-[10px]">
           <IconClose @click="$emit('cancel')" w="4" h="4" cursor="pointer" rounded="full" text="primaryOp dark:primary"></IconClose>
@@ -34,6 +40,10 @@ const props = defineProps({
   modelValue: {
     type: Boolean,
     default: false,
+  },
+  size: {
+    type: String,
+    default: "sm",
   },
 });
 

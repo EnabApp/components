@@ -1,6 +1,6 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <!-- <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification">تيست</UiButton> -->
+    <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification">تيست</UiButton>
     <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
     <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton> -->
     <!-- Code Preview "Position" -->
@@ -18,10 +18,10 @@
       { id: '4', value: 'Shark', icon: 'IconEnab' },
     ]" /> -->
 
-    <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
+    <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
     <Teleport to="body">
-      <UiModal v-model="stateModal" @cancel="modalCanceled">
-        <template #title>
+      <UiModal size="sm" v-model="stateModal" @cancel="modalCanceled">
+        <template  #title>
           صفحة تسجيل الدخول
         </template>
         <div>
@@ -32,23 +32,21 @@
           <UiButton position="center" size="lg" mdcolor="secondary" icon="IconNotification" class="mt-5"> Login</UiButton>
         </div>
       </UiModal>
-    </Teleport>
+    </Teleport> -->
 
-
-
-    <!-- <UiDropdown size="md" multiple :list="[
+    <UiDropdown size="lg" :list="[
       { id: 1, value: 'mosa' },
       { id: 2, value: 'nameer' },
       { id: 3, value: 'abd' },
       { id: 4, value: 'naser' },
       { id: 5, value: 'taher' },
     ]" placeholder="Type to search">
-    </UiDropdown> -->
+    </UiDropdown>
 
-    <!-- <UiSwitch size="md" :list="[
+    <UiSwitch size="lg" :list="[
       { id: '1', value: 'تجربة', icon: 'IconEnab' },
       { id: '2', value: 'هم تجربة', icon: 'IconEnab' },
-    ]" /> -->
+    ]" />
 
   </div>
 </template>
