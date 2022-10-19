@@ -33,15 +33,16 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
 
-    nuxt.hook('imports:dirs', (dirs) => {
-      dirs.push(resolve(runtimeDir, 'composables'))
-    })
+    // nuxt.hook('imports:dirs', (dirs) => {
+    //   dirs.push(resolve(runtimeDir, 'composables'))
+    // })
 
     // ColorMode Configuration
     let colorMode = { classSuffix: "" } as any;
     nuxt.options["colorMode"] = colorMode;
 
     // UnoCSS Configurations
-    nuxt.options["unocss"] = uno;
+    // nuxt.options["unocss"] = uno;
+    nuxt.options.unocss = uno;
   }
 })
