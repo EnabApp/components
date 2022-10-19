@@ -1,7 +1,7 @@
 <template>
-  <div w="full" @click="dropdown = true" position="relative">
+  <div w="full" @click="dropdown = !dropdown" position="relative">
     <!-- Main Search -->
-    <UiInput :size="props.size"
+    <UiInput v-if="props.input" :size="props.size"
       :label="label"
       :placeholder="placeholder"
       v-model="search"
@@ -9,64 +9,42 @@
     >
       <slot />
     </UiInput>
-        <!-- Showing multiple selects -->
-        <div v-if="multiple" class="absolute top-0 left-0" flex="~ gap-2px"
-        :class="{
-          'mt-1.7 ml-1': size == 'sm',
-          'mt-3.25 ml-1': size == 'md',
-          'mt-4 ml-1': size == 'lg',
-        }">
-          <span
-            v-for="item in selectedItems"
-            @click="selectItem(item)"
-            :key="item.id"
-            p="x-1"
-            text="xs secondary dark:secondaryOp"
-            bg="secondaryOp dark:secondary"
-            border="~ gray-50 dark:gray-600 rounded-5px"
-            cursor="pointer"
-            >{{ item.value }}</span
-          >
-        </div>
+    <UiButton v-if="!props.input" size="lg" position="center" mdcolor="secondary" v-model="search"
+      :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'">
+      <slot />
+    </UiButton>
 
-    <div
-      v-if="dropdown"
-      ref="dropdownRef"
-      w="full"
-      bg="secondaryOp dark:secondary"
-      border="~ gray-50 dark:gray-600 rounded-5px"
-      position="absolute"
-      text="secondary dark:secondaryOp"
-      m="t-1"
-      shadow="~ gray-200 dark:gray-700"
-    >
+
+    <!-- Showing multiple selects -->
+    <!-- <div v-if="multiple" class="absolute top-0 left-0" flex="~ gap-2px" :class="{
+      'mt-1.7 ml-1': size == 'sm',
+      'mt-3.25 ml-1': size == 'md',
+      'mt-4 ml-1': size == 'lg',
+    }">
+      <span v-for="item in selectedItems" @click="selectItem(item)" :key="item.id" p="x-1"
+        text="xs secondary dark:secondaryOp" bg="secondaryOp dark:secondary"
+        border="~ gray-50 dark:gray-600 rounded-5px" cursor="pointer">{{ item.value }}</span>
+    </div> -->
+
+    <div v-if="dropdown" ref="dropdownRef" w="full" bg="secondaryOp dark:secondary"
+      border="~ gray-50 dark:gray-600 rounded-5px" position="absolute" text="secondary dark:secondaryOp" m="t-1"
+      shadow="~ gray-200 dark:gray-700">
       <div flex="~ col gap-2" p="2">
-        <div
-          @click="selectItem(item)"
-          v-for="item in searchResult"
-          :key="item.id"
-          :class="{
-            'font-medium': item.id == selectedIdRef,
-          }"
-          bg="hover:secondary dark:hover:secondaryOp"
-          p="x-2 y-1"
-          flex="~"
-          justify="between"
-          items="center"
-          text="sm hover:secondaryOp dark:hover:secondary"
-          border="rounded-5px"
-          duration="100"
-        >
+        <div @click="selectItem(item)" v-for="item in searchResult" :key="item.id" :class="{
+          'font-medium': item.id == selectedIdRef,
+        }" bg="hover:secondary dark:hover:secondaryOp" p="x-2 y-1" flex="~" justify="between" items="center"
+          text="md hover:secondaryOp dark:hover:secondary" border="rounded-5px" duration="100">
           <span>
             {{ item.value }}
           </span>
+
           <span v-if="selectedItems.find((x) => x.id == item.id)">
-            true
+            <component v-if="item.icon" h="20px" w="20px" mt="0.8" :is="`${item.icon}`" />
           </span>
 
-          <span v-if="item.id == selectedIdRef">
+          <!-- <span v-if="item.id == selectedIdRef">
             <IconLoading w="10px" />
-          </span>
+          </span> -->
         </div>
       </div>
     </div>
@@ -104,6 +82,10 @@ const props = defineProps({
   size: {
     type: String,
     default: "sm",
+    default: false,
+  },
+    input: {
+    type: Boolean,
   },
 });
 
@@ -147,7 +129,7 @@ const selectItem = (item) => {
       emit("update:modelValue", null);
     } else {
       selectedIdRef.value = item.id;
-      search.value = item.value;
+      // search.value = item.value;
       emit("update:modelValue", item.id.toString());
     }
   }
@@ -162,5 +144,4 @@ onClickOutside(dropdownRef, (event) => {
     ).value;
   }
 });
-
 </script>
