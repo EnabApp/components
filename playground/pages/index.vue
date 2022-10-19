@@ -34,7 +34,7 @@
       </UiModal>
     </Teleport> -->
 
-    <UiDropdown  size="lg" :list="[
+    <UiDropdown size="lg" :list="[
       { id: 1, value: 'mosa', icon: 'IconCheckBoxFilled' },
       { id: 2, value: 'nameer', icon: 'IconCheckBoxFilled' },
       { id: 3, value: 'abd', icon: 'IconCheckBoxFilled' },
