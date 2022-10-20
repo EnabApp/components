@@ -5,7 +5,7 @@
       :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'">
       <slot />
     </UiInput>
-    <UiButton v-if="!props.input" :color="props.color" :size="props.size" position="center" mdcolor="secondary" v-model="search"
+    <UiButton v-if="!props.input" :color="props.color" :size="props.size" position="center" v-model="search"
       :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'">
       <slot />
     </UiButton>

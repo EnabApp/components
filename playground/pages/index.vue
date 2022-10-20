@@ -1,6 +1,6 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="lg" position="center" color="transparent" icon="IconNotification">mosa</UiButton>
+    <UiButton size="lg" position="center" icon="IconNotification">mosa</UiButton>
     <!-- <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification"></UiButton> -->
     <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
     <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton> -->
@@ -35,12 +35,12 @@
       </UiModal>
     </Teleport> -->
 
-    <UiDropdown size="lg" color="transparent" :list="[
+    <!-- <UiDropdown size="lg" color="secondary" :list="[
       { id: 1, value: 'اعمالي', icon: 'IconCheckBoxFilled' },
       { id: 2, value: 'اعمال غيري', icon: 'IconCheckBoxFilled' },
     ]" placeholder="Type to search">
       choose your أعمال
-    </UiDropdown>
+    </UiDropdown> -->
 
     <!-- <UiSwitch size="lg" :list="[
       { id: '1', value: 'تجربة', icon: 'IconEnab' },
