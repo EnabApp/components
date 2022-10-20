@@ -1,15 +1,11 @@
 <template>
   <div w="full" @click="dropdown = !dropdown" position="relative">
     <!-- Main Search -->
-    <UiInput v-if="props.input" :size="props.size"
-      :label="label"
-      :placeholder="placeholder"
-      v-model="search"
-      :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'"
-    >
+    <UiInput v-if="props.input" :size="props.size" :label="label" :placeholder="placeholder" v-model="search"
+      :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'">
       <slot />
     </UiInput>
-    <UiButton v-if="!props.input" size="lg" position="center" mdcolor="secondary" v-model="search"
+    <UiButton v-if="!props.input" :color="props.color" :size="props.size" position="center" v-model="search"
       :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'">
       <slot />
     </UiButton>
@@ -84,8 +80,11 @@ const props = defineProps({
     default: "sm",
     default: false,
   },
-    input: {
+  input: {
     type: Boolean,
+  },
+  color: {
+    type: String,
   },
 });
 
@@ -139,9 +138,9 @@ const selectItem = (item) => {
 onClickOutside(dropdownRef, (event) => {
   dropdown.value = false;
   if (selectedIdRef.value) {
-    search.value = props.list.find(
-      (item) => item.id === selectedIdRef.value
-    ).value;
+    // search.value = props.list.find(
+    //   (item) => item.id === selectedIdRef.value
+    // ).value;
   }
 });
 </script>

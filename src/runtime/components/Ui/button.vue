@@ -10,7 +10,12 @@
     <button v-else :class="classes" :disabled="disabled ? true : false">
       <!-- Title & icon button -->
       <slot />
-      <component v-if="icon" :is="icon" w="5" h="5" />
+      <component v-if="icon" :is="icon"
+      :class="{
+        'h-5 w-5': size == 'sm',
+        'h-6 w-6': size == 'md',
+        'h-7 w-7': size == 'lg',
+      }" />
     </button>
   </div>
 </template>
@@ -51,7 +56,7 @@ const props = defineProps({
 });
 
 const classes = computed(() => {
-  const array = ["flex gap-2 items-center", "rounded-[10px]", "no-underline"];
+  const array = ["flex gap-2 items-center", "rounded-[10px]", "no-underline",];
   switch (props.size) {
     case "sm":
       array.push("px-3 py-1.4 text-sm");
@@ -132,6 +137,17 @@ const classes = computed(() => {
       } else {
         array.push(
           "border-none bg-info hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
+        );
+      }
+      break;
+      case "transparent":
+      if (props.outline) {
+        array.push(
+          "bg-transparent border-none text-primaryOp dark:text-primary hover:text-secondaryOp dark:hover:text-secondary focus:opacity-75  "
+        );
+      } else {
+        array.push(
+          "bg-transparent border-none text-primaryOp dark:text-primary hover:text-secondaryOp dark:hover:text-secondary focus:opacity-75"
         );
       }
       break;
