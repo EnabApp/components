@@ -9,7 +9,7 @@
     >
       <slot />
     </UiInput>
-    <UiButton v-if="!props.input" size="lg" position="center" mdcolor="secondary" v-model="search"
+    <UiButton v-if="!props.input" :size="props.size" position="center" mdcolor="secondary" v-model="search"
       :icon="icon ? icon : dropdown ? 'IconBxsUpArrow' : 'IconBxsDownArrow'">
       <slot />
     </UiButton>

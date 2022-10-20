@@ -56,7 +56,7 @@ const props = defineProps({
 });
 
 const classes = computed(() => {
-  const array = ["flex gap-2 items-center", "rounded-[10px]", "no-underline"];
+  const array = ["flex gap-2 items-center", "rounded-[10px]", "no-underline",];
   switch (props.size) {
     case "sm":
       array.push("px-3 py-1.4 text-sm");
