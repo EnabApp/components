@@ -3,9 +3,9 @@
     <div @keypress.esc="$emit('cancel')" v-if="modelValue" position="absolute top-0 left-0" z="50" flex="~" place="items-center" justify="center" w="screen" h="screen" bg="primary dark:primaryOp opacity-5 dark:opacity-5" backdrop="~ blur-sm">
       <div ref="modalState" flex="~ col"
       :class="{
-        'max-w-75% min-w-25% max-h-70% min-h-25%': size == 'sm',
-        'max-w-75% min-w-50% max-h-70% min-h-50%': size == 'md',
-        'max-w-75% min-w-75% max-h-70% min-h-75%': size == 'lg', 
+        'max-w-75% min-w-30% max-h-70% min-h-25%': size == 'sm',
+        'max-w-75% min-w-35% max-h-70% min-h-50%': size == 'md',
+        'max-w-75% min-w-50% max-h-70% min-h-55%': size == 'lg',
       }"
       >
         <!-- Header -->

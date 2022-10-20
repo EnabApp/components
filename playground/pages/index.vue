@@ -1,7 +1,7 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification">تيست</UiButton>
-    <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification"></UiButton>
+    <!-- <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification">تيست</UiButton>
+    <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification"></UiButton> -->
 
     <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
     <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton> -->
@@ -20,9 +20,9 @@
       { id: '4', value: 'Shark', icon: 'IconEnab' },
     ]" /> -->
 
-    <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
+    <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
     <Teleport to="body">
-      <UiModal size="sm" v-model="stateModal" @cancel="modalCanceled">
+      <UiModal size="lg" v-model="stateModal" @cancel="modalCanceled">
         <template  #title>
           صفحة تسجيل الدخول
         </template>
@@ -34,7 +34,7 @@
           <UiButton position="center" size="lg" mdcolor="secondary" icon="IconNotification" class="mt-5"> Login</UiButton>
         </div>
       </UiModal>
-    </Teleport> -->
+    </Teleport>
 
     <!-- <UiDropdown size="lg" :list="[
       { id: 1, value: 'اعمالي', icon: 'IconCheckBoxFilled' },
