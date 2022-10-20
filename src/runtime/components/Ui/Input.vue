@@ -56,7 +56,7 @@ iv
         flex="~ gap-1"
         items="center"
         p="b-0.5"
-        m="1"
+        m="t-1"
         overflow="y-hidden"
       >
         <!-- Type password -->

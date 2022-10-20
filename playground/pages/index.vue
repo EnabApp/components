@@ -35,12 +35,13 @@
     </Teleport> -->
 
     <UiDropdown size="lg" :list="[
-      { id: 1, value: 'mosa' },
-      { id: 2, value: 'nameer' },
-      { id: 3, value: 'abd' },
-      { id: 4, value: 'naser' },
-      { id: 5, value: 'taher' },
+      { id: 1, value: 'mosa', icon: 'IconCheckBoxFilled' },
+      { id: 2, value: 'nameer', icon: 'IconCheckBoxFilled' },
+      { id: 3, value: 'abd', icon: 'IconCheckBoxFilled' },
+      { id: 4, value: 'naser', icon: 'IconCheckBoxFilled' },
+      { id: 5, value: 'taher', icon: 'IconCheckBoxFilled' },
     ]" placeholder="Type to search">
+    choose your name
     </UiDropdown>
 
     <UiSwitch size="lg" :list="[
