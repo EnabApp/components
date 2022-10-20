@@ -140,6 +140,17 @@ const classes = computed(() => {
         );
       }
       break;
+      case "transparent":
+      if (props.outline) {
+        array.push(
+          "bg-transparent border-none text-primaryOp dark:text-primary hover:text-secondaryOp dark:hover:text-secondary focus:opacity-75  "
+        );
+      } else {
+        array.push(
+          "bg-transparent border-none text-primaryOp dark:text-primary hover:text-secondaryOp dark:hover:text-secondary focus:opacity-75"
+        );
+      }
+      break;
     default:
       if (props.outline) {
         array.push(
