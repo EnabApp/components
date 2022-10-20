@@ -1,6 +1,8 @@
 <template>
   <div grid="~ cols-4 gap-4">
     <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification">تيست</UiButton>
+    <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification"></UiButton>
+
     <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
     <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton> -->
     <!-- Code Preview "Position" -->
@@ -34,20 +36,17 @@
       </UiModal>
     </Teleport> -->
 
-    <UiDropdown size="lg" :list="[
-      { id: 1, value: 'mosa', icon: 'IconCheckBoxFilled' },
-      { id: 2, value: 'nameer', icon: 'IconCheckBoxFilled' },
-      { id: 3, value: 'abd', icon: 'IconCheckBoxFilled' },
-      { id: 4, value: 'naser', icon: 'IconCheckBoxFilled' },
-      { id: 5, value: 'taher', icon: 'IconCheckBoxFilled' },
+    <!-- <UiDropdown size="lg" :list="[
+      { id: 1, value: 'اعمالي', icon: 'IconCheckBoxFilled' },
+      { id: 2, value: 'اعمال غيري', icon: 'IconCheckBoxFilled' },
     ]" placeholder="Type to search">
-    choose your name
-    </UiDropdown>
+      choose your أعمال
+    </UiDropdown> -->
 
-    <UiSwitch size="lg" :list="[
+    <!-- <UiSwitch size="lg" :list="[
       { id: '1', value: 'تجربة', icon: 'IconEnab' },
       { id: '2', value: 'هم تجربة', icon: 'IconEnab' },
-    ]" />
+    ]" /> -->
 
   </div>
 </template>
@@ -56,7 +55,6 @@
 import Dropdown from '~~/../src/runtime/components/Ui/Dropdown.vue';
 
 const [stateModal, toggleModal] = useToggle(false);
-
 const modalCanceled = () => {
   console.log("Canceled");
   stateModal.value = false;

@@ -10,7 +10,12 @@
     <button v-else :class="classes" :disabled="disabled ? true : false">
       <!-- Title & icon button -->
       <slot />
-      <component v-if="icon" :is="icon" w="5" h="5" />
+      <component v-if="icon" :is="icon"
+      :class="{
+        'h-5 w-5': size == 'sm',
+        'h-6 w-6': size == 'md',
+        'h-7 w-7': size == 'lg',
+      }" />
     </button>
   </div>
 </template>

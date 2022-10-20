@@ -139,9 +139,9 @@ const selectItem = (item) => {
 onClickOutside(dropdownRef, (event) => {
   dropdown.value = false;
   if (selectedIdRef.value) {
-    search.value = props.list.find(
-      (item) => item.id === selectedIdRef.value
-    ).value;
+    // search.value = props.list.find(
+    //   (item) => item.id === selectedIdRef.value
+    // ).value;
   }
 });
 </script>
