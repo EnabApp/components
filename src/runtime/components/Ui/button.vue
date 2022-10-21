@@ -103,7 +103,7 @@ const classes = computed(() => {
         );
       } else {
         array.push(
-          "border-none bg-success hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
+          "border-none bg-success dark:bg-successOp hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
         );
       }
       break;
@@ -114,18 +114,18 @@ const classes = computed(() => {
         );
       } else {
         array.push(
-          "border-none bg-error hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
+          "border-none bg-error dark:bg-errorOp hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
         );
       }
       break;
     case "warning":
       if (props.outline) {
         array.push(
-          "border border-warning-500 bg-inherit text-warning focus:opacity-75 hover:opacity-90  "
+          "border border-warning-500 bg-inherit text-warning focus:opacity-75 hover:opacity-90"
         );
       } else {
         array.push(
-          "border-none bg-warning hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
+          "border-none bg-warning dark:bg-warningOp hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
         );
       }
       break;
@@ -136,7 +136,7 @@ const classes = computed(() => {
         );
       } else {
         array.push(
-          "border-none bg-info hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
+          "border-none bg-info dark:bg-infoOp hover:opacity-90 text-primary dark:text-primaryOp focus:opacity-75 "
         );
       }
       break;

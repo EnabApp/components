@@ -1,16 +1,11 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="lg" position="center" icon="IconNotification">mosa</UiButton>
-    <!-- <UiButton size="lg" position="center" mdcolor="secondary" icon="IconNotification"></UiButton> -->
+    <UiButton size="lg" color="info" outline position="center" icon="IconNotification">mosa</UiButton>
     <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
-    <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton> -->
-    <!-- Code Preview "Position" -->
     <!-- Yes you can use Top, Bottom, right and left -->
     <!-- <UiToolTip text="it's Working!" position="bottom">
       <UiButton size=md color="success">Hover Me</UiButton>
     </UiToolTip> -->
-
-
 
     <!-- <UiSwitch :list="[
       { id: '1', value: 'Dog', icon: 'IconEnab' },
@@ -22,16 +17,23 @@
     <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
     <Teleport to="body">
       <UiModal size="md" v-model="stateModal" @cancel="modalCanceled">
-        <template  #title>
-          صفحة تسجيل الدخول
+        <template #title>
+          <UiTabGroup :tabs="['Enab', 'About']" >
+            <template #tab-1>
+              <h3 text="white">Enab Web OS</h3>
+              <p text="white">
+                Enab Developers Suggest you to keep doing what you "LIKE"
+              </p>
+            </template>
+
+            <template #tab-2>
+              <h3 text="white">About Enab Developers?</h3>
+              <p text="white">
+                Well, we're just a group of developers that kept doing what we "LIKE"
+              </p>
+            </template>
+          </UiTabGroup>
         </template>
-        <div>
-          <UiInput size="lg" placeholder="Placeholder" type="text" class="mb-5" />
-          <UiInput size="lg" placeholder="Placeholder" type="text" />
-        </div>
-        <div>
-          <UiButton position="center" size="lg" mdcolor="secondary" icon="IconNotification" class="mt-5"> Login</UiButton>
-        </div>
       </UiModal>
     </Teleport> -->
 
