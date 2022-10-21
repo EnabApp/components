@@ -92,7 +92,7 @@ const classes = computed(() => {
         );
       } else {
         array.push(
-          "border-none bg-secondary dark:bg-secondaryOp text-tertiaryOp dark:text-tertiary hover:text-primaryOp dark:hover:text-primary focus:opacity-75 "
+          "border-none bg-secondary dark:bg-secondaryOp hover:text-tertiaryOp dark:hover:text-tertiary text-primaryOp dark:text-primary focus:opacity-75 "
         );
       }
       break;
