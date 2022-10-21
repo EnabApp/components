@@ -1,6 +1,6 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="lg" color="info" outline position="center" icon="IconNotification">mosa</UiButton>
+    <UiButton size="lg" color="success" outline position="center" icon="IconNotification">mosa</UiButton>
     <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
     <!-- Yes you can use Top, Bottom, right and left -->
     <!-- <UiToolTip text="it's Working!" position="bottom">

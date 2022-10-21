@@ -99,7 +99,7 @@ const classes = computed(() => {
     case "success":
       if (props.outline) {
         array.push(
-          "border border-success-500 bg-inherit text-success focus:opacity-75 hover:opacity-90  "
+          "border border-success dark:border-successOp bg-inherit text-success focus:opacity-75 hover:opacity-90  "
         );
       } else {
         array.push(
@@ -110,7 +110,7 @@ const classes = computed(() => {
     case "error":
       if (props.outline) {
         array.push(
-          "border border-error-500 bg-inherit text-error focus:opacity-75 hover:opacity-90  "
+          "border border-error dark:border-errorOp bg-inherit text-error focus:opacity-75 hover:opacity-90  "
         );
       } else {
         array.push(
@@ -121,7 +121,7 @@ const classes = computed(() => {
     case "warning":
       if (props.outline) {
         array.push(
-          "border border-warning-500 bg-inherit text-warning focus:opacity-75 hover:opacity-90"
+          "border border-warning dark:border-warningOp bg-inherit text-warning focus:opacity-75 hover:opacity-90"
         );
       } else {
         array.push(
@@ -132,7 +132,7 @@ const classes = computed(() => {
     case "info":
       if (props.outline) {
         array.push(
-          "border border-info-500 bg-inherit text-info focus:opacity-75 hover:opacity-90  "
+          "border border-info dark:border-infoOp bg-inherit text-info focus:opacity-75 hover:opacity-90  "
         );
       } else {
         array.push(
