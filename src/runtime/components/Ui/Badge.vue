@@ -1,5 +1,5 @@
 <template>
-  <div class="group relative inline-block mx-8 my-6">
+  <div class="group relative inline-block mx-8 my-6 self-center">
     <slot />
     <div :class="tooltipPos[position]" absolute="~" flex="~" items="center">
       <div
@@ -42,6 +42,7 @@ const tooltipPos = {
   "top-right": "bottom-0 right-0",
   "bottom-left": "top-0 left-0",
   "bottom-right": "top-0 right-0",
+
 
 
 };

@@ -1,7 +1,7 @@
 <template>
   <div grid="~ cols-4 gap-4">
     <UiButton size="lg" position="center" icon="IconNotification">mosa</UiButton>
-    <UiBadge position="top-right" content="mosa" />
+    <UiBadge position="" content="mosa" />
     <!-- Yes you can use Top, Bottom, right and left -->
     <!-- <UiToolTip text="it's Working!" position="bottom">
       <UiButton size=md color="success">Hover Me</UiButton>
