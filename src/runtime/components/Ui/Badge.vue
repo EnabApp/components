@@ -1,14 +1,13 @@
 <template>
-  <div class="group relative inline-block">
+  <div class="group relative inline-block mx-8 my-6">
     <slot />
     <div :class="tooltipPos[position]" absolute="~" flex="~" items="center">
       <div
         flex="~"
         items="center"
-        absolute="~"
         text="xs primary"
         z="20"
-        h="10px"
+        h="auto"
         w="auto"
         p="3px"
         font="thin"
@@ -36,5 +35,14 @@ const props = defineProps({
 const tooltipPos = {
   top: "bottom-full",
   bottom: "top-full",
+  left: "right-full",
+  right: "left-full",
+
+  "top-left": "bottom-0 left-0",
+  "top-right": "bottom-0 right-0",
+  "bottom-left": "top-0 left-0",
+  "bottom-right": "top-0 right-0",
+
+
 };
 </script>

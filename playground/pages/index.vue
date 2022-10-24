@@ -1,7 +1,7 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="lg" color="secondary" position="center" icon="IconNotification">mosa</UiButton>
-    <!-- <UiInput size="lg" placeholder="Placeholder" type="text" /> -->
+    <UiButton size="lg" position="center" icon="IconNotification">mosa</UiButton>
+    <UiBadge position="top-right" content="mosa" />
     <!-- Yes you can use Top, Bottom, right and left -->
     <!-- <UiToolTip text="it's Working!" position="bottom">
       <UiButton size=md color="success">Hover Me</UiButton>
@@ -14,30 +14,22 @@
       { id: '4', value: 'Shark', icon: 'IconEnab' },
     ]" /> -->
 
-    <!-- <UiButton @click="stateModal = true" color="info">Show Modal</UiButton>
+    <!-- <UiButton size="lg" @click="stateModal = true" color="info">Show Modal</UiButton>
     <Teleport to="body">
       <UiModal size="md" v-model="stateModal" @cancel="modalCanceled">
         <template #title>
-          <UiTabGroup :tabs="['Enab', 'About']" >
-            <template #tab-1>
-              <h3 text="white">Enab Web OS</h3>
-              <p text="white">
-                Enab Developers Suggest you to keep doing what you "LIKE"
-              </p>
-            </template>
-
-            <template #tab-2>
-              <h3 text="white">About Enab Developers?</h3>
-              <p text="white">
-                Well, we're just a group of developers that kept doing what we "LIKE"
-              </p>
-            </template>
-          </UiTabGroup>
+          <div>
+            kemf
+          </div>
         </template>
+          <div>
+            rkemvk
+          </div>
+
       </UiModal>
     </Teleport> -->
 
-    <!-- <UiDropdown size="lg" color="secondary" :list="[
+    <!-- <UiDropdown size="lg" :list="[
       { id: 1, value: 'اعمالي', icon: 'IconCheckBoxFilled' },
       { id: 2, value: 'اعمال غيري', icon: 'IconCheckBoxFilled' },
     ]" placeholder="Type to search">

@@ -3,7 +3,7 @@
     <!-- Label -->
     <label
       v-if="label"
-      class="text-md font-medium text-tertiaryOp dark:text-tertiary"
+      class="text-sm font-medium text-tertiaryOp dark:text-tertiary"
       >{{ label }}</label
     >
 
