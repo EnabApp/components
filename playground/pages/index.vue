@@ -1,7 +1,7 @@
 <template>
   <div grid="~ cols-4 gap-4">
-    <UiButton size="lg" position="center" icon="IconNotification">mosa</UiButton>
-    <UiBadge position="" content="mosa" />
+    <UiButton size="lg" position="right" icon="IconNotification">هلو</UiButton>
+    <!-- <UiBadge position="" content="mosa" /> -->
     <!-- Yes you can use Top, Bottom, right and left -->
     <!-- <UiToolTip text="it's Working!" position="bottom">
       <UiButton size=md color="success">Hover Me</UiButton>
@@ -29,7 +29,7 @@
       </UiModal>
     </Teleport> -->
 
-    <!-- <UiDropdown size="lg" :list="[
+    <!-- <UiDropdown input size="lg" :list="[
       { id: 1, value: 'اعمالي', icon: 'IconCheckBoxFilled' },
       { id: 2, value: 'اعمال غيري', icon: 'IconCheckBoxFilled' },
     ]" placeholder="Type to search">

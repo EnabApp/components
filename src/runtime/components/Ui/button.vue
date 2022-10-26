@@ -165,10 +165,10 @@ const classes = computed(() => {
   }
   switch (props.position) {
     case "left":
-      array.push("justify-start");
+      array.push("justify-end");
       break;
     case "right":
-      array.push("justify-end");
+      array.push("justify-start");
       break;
     case "center":
       array.push("justify-center");
